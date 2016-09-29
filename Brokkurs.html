@@ -1,0 +1,477 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+               "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<title>Bråk</title>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+<meta name="title" content="Brokkurs"/>
+<meta name="generator" content="Org-mode"/>
+<meta name="generated" content="2016-09-24T19:25+0200"/>
+<meta name="author" content=""/>
+<meta name="description" content=""/>
+<meta name="keywords" content=""/>
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  html { font-family: Times, serif; font-size: 12pt; }
+  .title  { text-align: center; }
+  .todo   { color: red; }
+  .done   { color: green; }
+  .tag    { background-color: #add8e6; font-weight:normal }
+  .target { }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .right  {margin-left:auto; margin-right:0px;  text-align:right;}
+  .left   {margin-left:0px;  margin-right:auto; text-align:left;}
+  .center {margin-left:auto; margin-right:auto; text-align:center;}
+  p.verse { margin-left: 3% }
+  pre {
+	border: 1pt solid #AEBDCC;
+	background-color: #F3F5F7;
+	padding: 5pt;
+	font-family: courier, monospace;
+        font-size: 90%;
+        overflow:auto;
+  }
+  table { border-collapse: collapse; }
+  td, th { vertical-align: top;  }
+  th.right  { text-align:center;  }
+  th.left   { text-align:center;   }
+  th.center { text-align:center; }
+  td.right  { text-align:right;  }
+  td.left   { text-align:left;   }
+  td.center { text-align:center; }
+  dt { font-weight: bold; }
+  div.figure { padding: 0.5em; }
+  div.figure p { text-align: center; }
+  div.inlinetask {
+    padding:10px;
+    border:2px solid gray;
+    margin:10px;
+    background: #ffffcc;
+  }
+  textarea { overflow-x: auto; }
+  .linenr { font-size:smaller }
+  .code-highlighted {background-color:#ffff00;}
+  .org-info-js_info-navigation { border-style:none; }
+  #org-info-js_console-label { font-size:10px; font-weight:bold;
+                               white-space:nowrap; }
+  .org-info-js_search-highlight {background-color:#ffff00; color:#000000;
+                                 font-weight:bold; }
+  /*]]>*/-->
+</style>
+<link href="http://thomasf.github.io/solarized-css/solarized-light.min.css"  rel="stylesheet"/>
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2013 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+<script type="text/javascript" src="http://orgmode.org/mathjax/MathJax.js">
+/**
+ *
+ * @source: http://orgmode.org/mathjax/MathJax.js
+ *
+ * @licstart  The following is the entire license notice for the
+ *  JavaScript code in http://orgmode.org/mathjax/MathJax.js.
+ *
+ * Copyright (C) 2012-2013  MathJax
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *
+ * @licend  The above is the entire license notice
+ * for the JavaScript code in http://orgmode.org/mathjax/MathJax.js.
+ *
+ */
+
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code below.
+
+Copyright (C) 2012-2013 Free Software Foundation, Inc.
+
+The JavaScript code below is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code below.
+*/
+<!--/*--><![CDATA[/*><!--*/
+    MathJax.Hub.Config({
+        // Only one of the two following lines, depending on user settings
+        // First allows browser-native MathML display, second forces HTML/CSS
+        //  config: ["MMLorHTML.js"], jax: ["input/TeX"],
+            jax: ["input/TeX", "output/HTML-CSS"],
+        extensions: ["tex2jax.js","TeX/AMSmath.js","TeX/AMSsymbols.js",
+                     "TeX/noUndefined.js"],
+        tex2jax: {
+            inlineMath: [ ["\\(","\\)"] ],
+            displayMath: [ ['$$','$$'], ["\\[","\\]"], ["\\begin{displaymath}","\\end{displaymath}"] ],
+            skipTags: ["script","noscript","style","textarea","pre","code"],
+            ignoreClass: "tex2jax_ignore",
+            processEscapes: false,
+            processEnvironments: true,
+            preview: "TeX"
+        },
+        showProcessingMessages: true,
+        displayAlign: "center",
+        displayIndent: "2em",
+
+        "HTML-CSS": {
+             scale: 100,
+             availableFonts: ["STIX","TeX"],
+             preferredFont: "TeX",
+             webFont: "TeX",
+             imageFont: "TeX",
+             showMathMenu: true,
+        },
+        MMLorHTML: {
+             prefer: {
+                 MSIE:    "MML",
+                 Firefox: "MML",
+                 Opera:   "HTML",
+                 other:   "HTML"
+             }
+        }
+    });
+/*]]>*///-->
+</script>
+</head>
+<body>
+
+<div id="preamble">
+
+</div>
+
+<div id="content">
+<h1 class="title">Bråk</h1>
+
+
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#sec-1">1 Org-mode för undervisning</a></li>
+<li><a href="#sec-2">2 Räkna med bråk</a>
+<ul>
+<li><a href="#sec-2-1">2.1 Vecka 39: Bråktal</a>
+<ul>
+<li><a href="#sec-2-1-1">2.1.1 Länkar</a></li>
+</ul>
+</li>
+<li><a href="#sec-2-2">2.2 Vecka 40: Ord och begrepp</a>
+<ul>
+<li><a href="#sec-2-2-1">2.2.1 Länkar</a></li>
+</ul>
+</li>
+<li><a href="#sec-2-3">2.3 Vecka 42: Räkneregler</a>
+<ul>
+<li><a href="#sec-2-3-1">2.3.1 Länkar</a></li>
+</ul>
+</li>
+<li><a href="#sec-2-4">2.4 Vecka 41: Användningsområden</a>
+<ul>
+<li><a href="#sec-2-4-1">2.4.1 Länkar</a></li>
+</ul>
+</li>
+<li><a href="#sec-2-5">2.5 Vecka 43: Prov</a>
+<ul>
+<li><a href="#sec-2-5-1">2.5.1 Övningsuppgifter inför provet</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-1" class="outline-2">
+<h2 id="sec-1"><span class="section-number-2">1</span> Org-mode för undervisning</h2>
+<div class="outline-text-2" id="text-1">
+
+<p>Detta är ett exempel på hur man kan använda org-mode för emacs i undervisning. Org-mode är ett tillägg till ordprocessorn emacs och den använder trädstrukturen i ett textdokument för att enkelt producera hemsidor, pdf'er eller presentationer. Org-mode är huvudsakligen tänkt som en task manager och man kan enkelt skriva ner todos och hålla koll på de todos man gjort och prioritera dem på olika sätt. Org-mode innehåller även spreadsheetfunktioner, vilket exempelvis gör att man lätt kan hålla koll på eleverna och få ett bra stöd vid betygsättning.
+Vi kommer att visa hur man kan organisera och publicera material för en matematikkurs rörande bråktal. Eleven kommer att kunna besöka en hemsida för kursen, med planering, nedladdningsbart material och länkar till kompletterande youtube material. Materialet är tänkt för årkurs 8 eller högre. Det går att ladda ner webbsidan som pdf liksom den råa textfilen (.org) som använts: <a href="Brokkurs.pdf"> kursen som pdf </a>, <a href="Brokkurs.org"> kursen som org </a>.
+
+</p>
+</div>
+
+</div>
+
+<div id="outline-container-2" class="outline-2">
+<h2 id="sec-2"><span class="section-number-2">2</span> Räkna med bråk</h2>
+<div class="outline-text-2" id="text-2">
+
+
+<p>
+Detta är en liten kurs för den som vill lära sig om hur man räknar med bråk. Kursen är fyra veckor lång.
+</p>
+
+</div>
+
+<div id="outline-container-2-1" class="outline-3">
+<h3 id="sec-2-1"><span class="section-number-3">2.1</span> <span class="done DONE">DONE</span> Vecka 39: Bråktal</h3>
+<div class="outline-text-3" id="text-2-1">
+
+<p>    <span class="timestamp-wrapper"><span class="timestamp-kwd">SCHEDULED: </span> <span class="timestamp">2016-09-28 Wed, 13.00</span></span><br/>
+</p>
+
+
+<ul>
+<li>Ett bråktal är ett tal som kan skrivas som kvoten av två heltal.
+   Exempel: \(\frac{3}{5}, \frac{2}{6}\) eller \(\frac{7}{9}\).
+</li>
+<li>Alla bråktal kan skrivas som decimaltal men bara vissa decimaltal kan skrivas som bråk.
+   Exempel: \(\frac{3}{5}=\) 0.6, \(\frac{1}{2}=\) 0.5 eller \(\frac{1}{10}=\) 0.1.
+</li>
+<li>Vissa bråktal ger oändliga decimaltal.
+   Exempel: \(\frac{1}{3}=\) 0.33333&hellip; .
+</li>
+<li>Decimaltal som kan skrivas som bråktal kallas för <i>rationella</i> tal. De har en avslutas med en repeterande decimalutveckling.
+   Exempel: 0.100(0)&hellip;, 0.123123(123)&hellip; eller 0.333(3)&hellip; .
+</li>
+<li>Decimaltal som inte kan skrivas som bråktal kallas för <i>irrationella</i>. De avslutas inte med en upprepad decimalutveckling.
+   Exempel: Pi=3.14&hellip;, e=2.718&hellip;
+</li>
+</ul>
+
+
+
+</div>
+
+<div id="outline-container-2-1-1" class="outline-4">
+<h4 id="sec-2-1-1"><span class="section-number-4">2.1.1</span> Länkar</h4>
+<div class="outline-text-4" id="text-2-1-1">
+
+<p><a href="https://www.youtube.com/watch?v=CHCxEbfuX3M">Heltal,rationella och irrationella tal</a>
+<a href="https://www.youtube.com/watch?v=d-qrpr9QaOQ">Bråkintro</a>
+</p>
+</div>
+</div>
+
+</div>
+
+<div id="outline-container-2-2" class="outline-3">
+<h3 id="sec-2-2"><span class="section-number-3">2.2</span> <span class="todo TODO">TODO</span> Vecka 40: Ord och begrepp</h3>
+<div class="outline-text-3" id="text-2-2">
+
+<p>    <span class="timestamp-wrapper"><span class="timestamp-kwd">SCHEDULED: </span> <span class="timestamp">2016-10-03 Mon</span></span><br/>
+</p>
+
+<ul>
+<li>Ett bråktal består av två heltal där ett tal delar det andra. Man kallar det tal som delar det andra för <i>nämnare</i> och det tal som delas kallar man för <i>täljare</i>: Ett bråktal har formen täljare/nämnare.
+</li>
+<li>Ett bråktal där täljaren och nämnaren inte innehåller en gemensam faktor sägs vara i <i>förenklad form</i>. Man kan också säga att ett bråktal vars täljare och nämnare inte båda är jämt delbara med ett och samma heltal är i förenklad form. Exempelvis har är både 4 och 8 jämt delbara med 2. Alltså är inte \(\frac{4}{8}\) ett bråk skrivet på förenklad form. Däremot är \(\frac{1}{2}\) på förenklad form. Notera att \(\frac{4}{8}=\frac{1}{2}\).
+</li>
+<li>Bråk används oftast när man ska räkna med uppdelade saker. Man kan exempelvis dela upp en pizza i 8 bitar. En bit är då en åttondels pizza vilket kan skrivas som \(\frac{1}{8}\). Om man äter tre sådana bitar har man ätit \(\frac{3}{8}\) av en hel pizza. Nämnaren anger i detta fall hur många bitar man behöver äta för att ha ätit en hel pizza. Täljaren anger alltså hur många bitar man ätit medans nämnaren anger hur många bitar en pizza ger.
+</li>
+</ul>
+
+
+
+</div>
+
+<div id="outline-container-2-2-1" class="outline-4">
+<h4 id="sec-2-2-1"><span class="section-number-4">2.2.1</span> Länkar</h4>
+<div class="outline-text-4" id="text-2-2-1">
+
+<p><a href="https://www.youtube.com/watch?v=xAaJcWyaPhc">Förkortning</a>
+<a href="https://www.youtube.com/watch?v=vQ5Ru5JdKuI">Förlängning och förkortning</a>
+</p>
+</div>
+</div>
+
+</div>
+
+<div id="outline-container-2-3" class="outline-3">
+<h3 id="sec-2-3"><span class="section-number-3">2.3</span> <span class="todo TODO">TODO</span> Vecka 42: Räkneregler</h3>
+<div class="outline-text-3" id="text-2-3">
+
+<p>    <span class="timestamp-wrapper"><span class="timestamp-kwd">SCHEDULED: </span> <span class="timestamp">2016-10-11 Tue</span></span><br/>
+</p>
+
+<ul>
+<li>Man kan addera två eller flera bråktal genom att skriva om deras nämnare så att de blir lika. Exempelvis är \(\frac{1}{2}+\frac{1}{3}=\frac{1*3}{2*3}+\frac{1*2}{3*2}=\frac{3}{6}+\frac{2}{6}=\frac{5}{6}\).
+</li>
+<li>Man kan göra nämnare lika med hjälp av många knep och tricks men det finns en regel för addition man alltid kan använda: \(\frac{a}{b}+\frac{c}{d}=\frac{a*d+b*c}{c*d}\). Kan du räkna ut hur denna regel ser ut för subtraktion?
+</li>
+<li>Man kan dividera och multiplicera bråktal också. De generella reglerna för gånger och delat är \(\frac{a}{b}*\frac{c}{d}=\frac{a*c}{b*d}\) och \(\frac{\frac{a}{b}}{\frac{c}{d}}=\frac{a*d}{b*c}\).
+</li>
+</ul>
+
+
+
+
+</div>
+
+<div id="outline-container-2-3-1" class="outline-4">
+<h4 id="sec-2-3-1"><span class="section-number-4">2.3.1</span> Länkar</h4>
+<div class="outline-text-4" id="text-2-3-1">
+
+
+<p>
+<a href="https://www.youtube.com/watch?v=Ozl9ZSLJY9U">Plus och minus</a>
+<a href="https://www.youtube.com/watch?v=COGkfJmYxxs">Gånger</a>
+<a href="https://www.youtube.com/watch?v=a-jCK6Yphcw">Räkna med bråk</a>
+</p>
+</div>
+</div>
+
+</div>
+
+<div id="outline-container-2-4" class="outline-3">
+<h3 id="sec-2-4"><span class="section-number-3">2.4</span> <span class="todo TODO">TODO</span> Vecka 41: Användningsområden</h3>
+<div class="outline-text-3" id="text-2-4">
+
+<p>    <span class="timestamp-wrapper"><span class="timestamp-kwd">SCHEDULED: </span> <span class="timestamp">2016-10-17 Mon</span></span><br/>
+</p>
+
+
+<ul>
+<li>Bråk används ofta när man vill räkna med andelar. Man säger att en \(andel=\frac{del}{helhet}\).
+</li>
+<li>Procent används ofta när man ska beskriva hur saker förändras. Ett procenttal anger hur många hundradelar en förändring motsvarar.En procent är lika med bråktalet \(\frac{1}{100}\). Exempelvis kanske man betalat 120 kr för en biobiljett. Nästa vecka kanske biljettpriset ska höjas och detta anges då ofta i procent. Om höjningen är 10 procent blir då priset tio hundradelar dyrare, dvs man får betala \(\frac{120}{100}*10=12\) kronor mer.
+</li>
+<li>Bråk används också när man pratar och räknar med sannolikheter. En tärning har sex sidor och man anger sannolikheter vid tärningskast i termer av bråk med nämnaren 6. Exempelvis är sannolikheten att man får en fyra eller femma vid ett kast lika med \(\frac{1}{6}*2=\frac{2}{6}\), vilket i förenklad form är lika med \(\frac{1}{3}\).
+</li>
+</ul>
+
+
+
+</div>
+
+<div id="outline-container-2-4-1" class="outline-4">
+<h4 id="sec-2-4-1"><span class="section-number-4">2.4.1</span> Länkar</h4>
+<div class="outline-text-4" id="text-2-4-1">
+
+<p><a href="https://www.youtube.com/watch?v=VysMxd1pE5M">Sannolikhet</a>
+</p>
+</div>
+</div>
+
+</div>
+
+<div id="outline-container-2-5" class="outline-3">
+<h3 id="sec-2-5"><span class="section-number-3">2.5</span> Vecka 43: Prov</h3>
+<div class="outline-text-3" id="text-2-5">
+
+<p>    <span class="timestamp-wrapper"><span class="timestamp-kwd">SCHEDULED: </span> <span class="timestamp">2016-10-26 Wed</span></span><br/>
+</p>
+<p>
+Denna vecka skall vi ha prov. Lycka till!
+</p>
+
+</div>
+
+<div id="outline-container-2-5-1" class="outline-4">
+<h4 id="sec-2-5-1"><span class="section-number-4">2.5.1</span> Övningsuppgifter inför provet</h4>
+<div class="outline-text-4" id="text-2-5-1">
+
+
+<ul>
+<li>Sjuorna på Sagaskolan har lätt att prata om annat än matte på mattelektionerna. Deras lärare, i alla fall de lärare som är alltför snälla, gissar att 20% av lektionstiderna går åt till annat prat. De har tre timmar matematik per vecka och det är 12 veckor per termin. Hur mycket lektionstid i matematik missas per termin?
+
+</li>
+<li>Hälften av hälften av hälften? Ge svaret både i decimalform och bråkform!
+
+</li>
+<li>En tiondel av en femtedel? Ge svaret både i decimalform och i bråkform!
+
+</li>
+<li>En tärning har sex sidor, varav hälften är jämna tal. Vad är sannolikheten att få ett udda tal?
+
+</li>
+<li>Pizza är mycket gott men kan ge mycket energi. Om en hel pizza ger 1600 kcal (kcal är ett mått på energi), hur många kcal får man om man äter två bitar om pizzan delats i åtta lika stora bitar?
+
+</li>
+<li>Lena har växt 15.4 centimeter på ett år. För ett år sedan var hon 140 centimeter lång. Hur många procent har hon växt?
+
+</li>
+<li>Hur stor andel av en timme är en kvart?
+
+</li>
+<li>Det tar fem timmar att åka tåg mellan Swag City och Finmåla om man åker 80 kilometer per timme. Hur långt är det mellan Swag City och Finmåla? Hur många timmar tar det om man åker 100 kilometer per timme och hur många procent snabbare är det?
+
+</li>
+<li>Skriv en matteuppgift där svaret är ungefär 16.6%.
+
+</li>
+</ul>
+
+
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="postamble">
+<p class="date">Date: 2016-09-24T19:25+0200</p>
+<p class="author">Author: Mikael Hall</p>
+<p class="creator"><a href="http://orgmode.org">Org</a> version 7.9.3f with <a href="http://www.gnu.org/software/emacs/">Emacs</a> version 24</p>
+<a href="http://validator.w3.org/check?uri=referer">Validate XHTML 1.0</a>
+
+</div>
+</body>
+</html>
